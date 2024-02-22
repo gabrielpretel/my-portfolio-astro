@@ -1,9 +1,62 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-	</main>
+<Layout
+  title="Portfolio de Gabriel Pretel - Diseñador y Desarrollador web con +5 años de experiencia"
+  description="Contrata a Gabriel Pretel para crear tus proyectos"
+>
+  <main>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="https://i1.sndcdn.com/avatars-000007484139-w5fods-t500x500.jpg"
+        alt="gabri photo"
+      />
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+        Hey, soy Gabriel <a
+          href="https://www.linkedin.com/in/gabriel-pretel"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl text-wrap">
+        <span>+5 años de experiencia.</span><span
+          class="text-yellow-200/90 opacity-80"
+        >
+          Diseñador y Desarrollador Web.</span
+        >
+        <span class="text-red-200/50">De Granada, España.</span>
+        <span class="opacity-75">Especializado en desarrollo FrontEnd.</span>
+      </h2>
+
+      <nav class="flex gap-x-2">
+        <SocialPill href="https://www.linkedin.com/in/gabriel-pretel">
+          <LinkedInIcon class="size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/gabrielpretel/">
+          <GitHubIcon class="size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="https://github.com/gabrielpretel/">
+          <MailIcon class="size-6" />
+          gabrilinex@gmail.com
+        </SocialPill>
+      </nav>
+    </section>
+    <section class="w-full lg:w-[740px] mx-auto">
+      <Experience />
+    </section>
+  </main>
 </Layout>

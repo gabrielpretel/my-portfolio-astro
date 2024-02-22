@@ -1,0 +1,28 @@
+---
+import ExperienceItem from "../components/ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "March 2022",
+    title: "Marketing UI Design in Figma",
+    decription:
+      "Mucho texto aquí aunque sea solo de prueba para que no se vea vacío y feo.",
+  },
+  {
+    date: "February 2024",
+    title: "Bootcamp Lemoncode",
+    decription:
+      "Mucho texto aquí aunque sea solo de prueba para que no se vea vacío y feo.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
