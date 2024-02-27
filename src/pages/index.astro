@@ -2,8 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
+import Projects from "../components/Projects.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
 import SocialPill from "../components/SocialPill.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import MailIcon from "../components/icons/Mail.astro";
@@ -15,14 +17,16 @@ import SectionContainer from "../components/SectionContainer.astro";
   title="Portfolio de Gabriel Pretel - Diseñador y Desarrollador web con +5 años de experiencia"
   description="Contrata a Gabriel Pretel para crear tus proyectos"
 >
-  <main>
-    <SectionContainer class="py-44 pb-24">
+  <main class="px-6">
+    <SectionContainer class="py-20 pb-32">
       <img
         class="rounded-full w-[150px] mb-4 scale-x-[-1]"
         src="../../public/199492.webp"
         alt="gabri photo"
       />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+      <h1
+        class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
         Hey, soy Gabriel <a
           href="https://www.linkedin.com/in/gabriel-pretel"
           target="_blank"
@@ -32,7 +36,7 @@ import SectionContainer from "../components/SectionContainer.astro";
           <Badge>Disponible para trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-xl text-wrap">
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
         <span>+5 años de experiencia.</span><span
           class="text-yellow-200/90 opacity-80"
         >
@@ -42,27 +46,34 @@ import SectionContainer from "../components/SectionContainer.astro";
         <span class="opacity-75">Especializado en desarrollo FrontEnd.</span>
       </h2>
 
-      <nav class="flex gap-x-2">
+      <nav class="flex gap-4 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/gabriel-pretel">
-          <LinkedInIcon class="size-6" />
+          <LinkedInIcon class="size-4 md:size-6" />
           LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/gabrielpretel/">
-          <GitHubIcon class="size-6" />
+          <GitHubIcon class="size-4 md:size-6" />
           GitHub
         </SocialPill>
         <SocialPill href="mailto:gabrilinex@gmail.com">
-          <MailIcon class="size-6" />
+          <MailIcon class="size-4 md:size-6" />
           gabrilinex@gmail.com
         </SocialPill>
       </nav>
     </SectionContainer>
     <SectionContainer id="experiencia">
-      <h2 class="text-2xl font-semibold mb-8 flex gap-x-3 items-center">
+      <h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
         <Briefcase class="size-7" />
         Experiencia laboral
       </h2>
       <Experience />
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>

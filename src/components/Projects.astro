@@ -1,0 +1,28 @@
+---
+const PROJECTS = [
+  {
+    title: "Tabler Icons: 4950+ free vector icons for web design",
+    description:
+      "Tabler Icons: 4962 free and open source SVG icons. Customizable size, color and stroke width. Packages are available for React, SolidJS, Vue, Figma, Svelte and Preact. Icons can be downloaded as PNG, Webfont, PDF or EPS files. All for free!",
+    link: "https://tabler.io/icons",
+    github: "#",
+    image: "/projects/tablericon.jpeg",
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <ul>
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <img src={image} alt={`Captura de pantalla del proyecto ${image}`} />
+    </article>
+  ))
+}
