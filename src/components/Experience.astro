@@ -1,23 +1,28 @@
 ---
-import ExperienceItem from "../components/ExperienceItem.astro";
+import ExperienceItem from "./ExperienceItem.astro"
 
 const EXPERIENCE = [
   {
-    date: "March 2022",
-    title: "Marketing UI Design in Figma",
-    decription:
-      "Mucho texto aquí aunque sea solo de prueba para que no se vea vacío y feo.",
+    date: "Abril 2024",
+    title: "Master Frontend Lemoncode",
+    description: "Participé en un intensivo programa de Master en Frontend ofrecido por Lemoncode, donde adquirí conocimientos avanzados en tecnologías como React, Angular, VueJS, y desarrollo con TypeScript. Desarrollé varios proyectos prácticos, incluyendo una aplicación de comercio electrónico y un SPA (Single Page Application) que me permitieron consolidar mis habilidades en diseño responsivo, optimización de rendimiento y accesibilidad web.",
+    link:"#"
   },
   {
-    date: "February 2024",
+    date: "Diciembre 2023",
     title: "Bootcamp Lemoncode",
-    decription:
-      "Mucho texto aquí aunque sea solo de prueba para que no se vea vacío y feo.",
+    description: "Completé un bootcamp de desarrollo web full-stack en Lemoncode, donde aprendí las bases del desarrollo frontend y backend utilizando JavaScript y Node.js. Trabajé en equipo para crear aplicaciones desde cero, lo que me ayudó a entender el flujo de trabajo en el desarrollo de software y a mejorar mis habilidades de colaboración y resolución de problemas.",
+  },
+  {
+    date: "Marzo 2022",
+    title: "Marketing UI Design in Figma",
+    description: "Realicé un curso especializado en diseño de interfaces de usuario centrado en marketing, utilizando Figma como herramienta principal. Aprendí técnicas de diseño UI enfocadas en la conversión y la usabilidad, y cómo aplicar principios de psicología del usuario para mejorar la experiencia del usuario final. Desarrollé varios proyectos de diseño, incluyendo landings y dashboards, lo que me permitió comprender mejor cómo el diseño impacta directamente en los resultados de negocio.",
   },
 ];
+
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative border-s border-gray-200 ml-3">
   {
     EXPERIENCE.map((experience) => (
       <li class="mb-10 ms-4">

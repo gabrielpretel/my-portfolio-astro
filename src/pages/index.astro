@@ -3,10 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 import SocialPill from "../components/SocialPill.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import MailIcon from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 ---
 
 <Layout
@@ -14,7 +16,7 @@ import Experience from "../components/Experience.astro";
   description="Contrata a Gabriel Pretel para crear tus proyectos"
 >
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
+    <SectionContainer class="py-44 pb-24">
       <img
         class="rounded-full size-12 mb-4"
         src="https://i1.sndcdn.com/avatars-000007484139-w5fods-t500x500.jpg"
@@ -49,14 +51,18 @@ import Experience from "../components/Experience.astro";
           <GitHubIcon class="size-6" />
           GitHub
         </SocialPill>
-        <SocialPill href="https://github.com/gabrielpretel/">
+        <SocialPill href="mailto:gabrilinex@gmail.com">
           <MailIcon class="size-6" />
           gabrilinex@gmail.com
         </SocialPill>
       </nav>
-    </section>
-    <section class="w-full lg:w-[740px] mx-auto">
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-8 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+        Experiencia laboral
+      </h2>
       <Experience />
-    </section>
+    </SectionContainer>
   </main>
 </Layout>
